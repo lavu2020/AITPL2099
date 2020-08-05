@@ -5,13 +5,14 @@ for row in range(1,rows):
         print(column,end=' ')
     print(" ")
 #program to find second and fourth largest number
-L=[10,20,30,40]
-l=list(map(int(input().split())))
-l.sort()
-print(l)
-print("2nd large number is {0},4th large number{1}".format(l[-2],[-4]))
+m=int(input("enter number of elements:"))
+a=list(map(int,input(" enter the numbers:").strip().split()))
+a.sort()
+print(a)
+print("2nd large number is {0},4th large number{1}".format(a[-2],a[-4]))
 #program third and fifth largest number
-l=list(map(int(input().split())))
-l.sort()
-print(l)
-print("2nd large number is {0},4th large number{1}".format(l[-3],[-5]))
+m=int(input("enter number of elements:"))
+a=list(map(int,input(" enter the numbers:").strip().split()))
+a.sort()
+print(a)
+print("3rd large number is {0},5th large number{1}".format(a[-3],a[-5]))
