@@ -11,13 +11,20 @@ def insert_table():
     c.execute("insert into lavanya_emp values('004','mickey',40000)")
     c.execute("insert into lavanya_emp values('005','bheem',50000)")
     con.commit()
+def update_table():
+    c.execute("update lavanya_emp set  emp_id='006',name='teju' where salary=60000")
+    con.commit()
+def delete_table():
+    c.execute("delete from lavanya_emp where name='bheem'")
 def select_table():
     c.execute('select * from lavanya_emp')
     data=c.fetchall()
     for row in data:
         print(row)
-create_table()
-insert_table()
+#create_table()
+#insert_table()
+#update_table()
+delete_table()
 select_table()
 c.close()
 con.close()

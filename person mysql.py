@@ -10,13 +10,21 @@ def insert_table():
     c.execute("insert into lavu_person values('mickey','1999/08/02','btm','914833')")
     c.execute("insert into lavu_person values('bheem','2000/05/20','bsk','997271')")
     con.commit()
+def update_table():
+        c.execute("update lavu_person set name='lavanya',dob='1999/08/20',address='basvangudi' where pan='14567' ")
+        con.commit()
+
+def delete_table():
+        c.execute("delete from lavu_person where name='bheem'")
 def select_table():
     c.execute('select * from lavu_person')
     data=c.fetchall()
     for row in data:
         print(row)
-create_table()
-insert_table()
+#create_table()
+#insert_table()
+#update_table()
+delete_table()
 select_table()
 c.close()
 con.close()
